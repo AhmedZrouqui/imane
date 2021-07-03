@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+/*spacing */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Fira Code", monospace;
+  cursor: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  background: #171717;
+  width: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #fdf5dd;
+  border-radius: 4px;
+}
+
+.App {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.expand {
+  -webkit-transform: scaleX(1) !important;
+          transform: scaleX(1) !important;
+  -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%) !important;
+          clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%) !important;
+  -webkit-transition: 1s ease-in-out !important;
+  transition: 1s ease-in-out !important;
+}
+
+.wait-a-second {
+  -webkit-transform: scaleX(0) !important;
+          transform: scaleX(0) !important;
+  -webkit-transition: 1s 750ms ease-in-out !important;
+  transition: 1s 750ms ease-in-out !important;
+}
+
+.expand_link::before {
+  -webkit-transform: scaleY(0) !important;
+          transform: scaleY(0) !important;
+  -webkit-transition: 1500ms 750ms ease-in-out;
+  transition: 1500ms 750ms ease-in-out;
+}
+
+.close-immediately::before {
+  -webkit-transform: scaleY(1) !important;
+          transform: scaleY(1) !important;
+  -webkit-transition: 1s ease-in-out !important;
+  transition: 1s ease-in-out !important;
+}
+
+.dropdown {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  -webkit-clip-path: polygon(100% 0, 0 0, 0 0%, 100% 100%);
+          clip-path: polygon(100% 0, 0 0, 0 0%, 100% 100%);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  background: #fdf5dd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.dropdown .nav ul {
+  list-style: none;
+}
+
+.dropdown .nav ul li {
+  padding: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.dropdown .nav ul li a {
+  font-size: 4rem;
+  text-decoration: none;
+  color: #171717;
+  font-weight: 800;
+  padding: 2rem;
+}
+
+.dropdown .nav ul li a:hover {
+  font-style: italic;
+}
+
+.dropdown .nav ul li::before {
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  border-bottom: 4px #171717 solid;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  position: absolute;
+  background: #fdf5dd;
+  -webkit-transition: 1500ms 750ms ease-in-out;
+  transition: 1500ms 750ms ease-in-out;
+}
+
+.dropdown .close {
+  top: 1rem;
+  right: 1rem;
+  text-decoration: underline;
+  font-size: 2rem;
+  font-weight: 800;
+  position: absolute;
+  color: #171717;
+}
+
+.cursor {
+  z-index: 1000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fdf5dd;
+  -webkit-transform: matrix3d(0, 0, 0);
+          transform: matrix3d(0, 0, 0);
+  position: fixed;
+  background: #fdf5dd;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+.index_page {
+  width: 100vw;
+  height: 100vh;
+  background: #171717;
+  position: relative;
+  overflow: hidden;
+}
+
+.index_page .welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80vh;
+  z-index: 3;
+  padding: 2rem;
+  position: relative;
+}
+
+.index_page .welcome h1 {
+  color: #fdf5dd;
+  font-size: 3rem;
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+  padding-inline: 1rem;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+.index_page .welcome h1::after {
+  content: "";
+  position: absolute;
+  background: #171717;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-animation: typing 4s 1s steps(54) forwards;
+          animation: typing 4s 1s steps(54) forwards;
+}
+
+.index_page .welcome h1::before {
+  content: "";
+  background: transparent;
+  top: 0;
+  bottom: 0;
+  left: 2px;
+  right: 0;
+  position: absolute;
+  border-left: 1px #fdf5dd solid;
+  z-index: 5;
+  -webkit-animation: bleak 4s 1s steps(54) forwards, typing_effect 750ms ease-in-out infinite;
+          animation: bleak 4s 1s steps(54) forwards, typing_effect 750ms ease-in-out infinite;
+}
+
+.index_page .welcome .to-my-website {
+  color: #fdf5dd;
+  font-size: 2rem;
+  opacity: 0;
+  -webkit-animation: appear 1s 5s ease-in-out forwards;
+          animation: appear 1s 5s ease-in-out forwards;
+}
+
+.index_page .welcome .scroll {
+  position: absolute;
+  bottom: 0;
+  color: #fdf5dd;
+  opacity: 0;
+  left: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-decoration: underline;
+  -webkit-transform: matrix3d(0, 0, 0);
+          transform: matrix3d(0, 0, 0);
+  -webkit-animation: scrollme 2s ease infinite;
+          animation: scrollme 2s ease infinite;
+}
+
+.index_page .index_social .social-nav {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-left: 1rem;
+}
+
+.index_page .index_social .social-nav ul {
+  list-style: none;
+}
+
+.index_page .index_social .social-nav ul li {
+  padding: 1rem 0;
+}
+
+.index_page .index_social .social-nav ul li a {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  color: #fdf5dd;
+  opacity: 0.4;
+  -webkit-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+.index_page .index_social .social-nav ul li a:hover {
+  opacity: 1;
+  -webkit-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+.index_page .rotating-shape {
+  width: 40vw;
+  height: 40vw;
+  z-index: 2;
+  border: 4px #fdf5dd solid;
+  background: transparent;
+  position: absolute;
+  opacity: 0.1;
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
+  left: 50%;
+  top: 50%;
+  -webkit-animation: inf_loop 60s ease infinite;
+          animation: inf_loop 60s ease infinite;
+}
+
+@-webkit-keyframes typing {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes typing {
+  to {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes bleak {
+  to {
+    left: calc(100% - 2px);
+  }
+}
+
+@keyframes bleak {
+  to {
+    left: calc(100% - 2px);
+  }
+}
+
+@-webkit-keyframes typing_effect {
+  to {
+    border-left: none;
+  }
+}
+
+@keyframes typing_effect {
+  to {
+    border-left: none;
+  }
+}
+
+@-webkit-keyframes scrollme {
+  to {
+    opacity: 0.6;
+  }
+}
+
+@keyframes scrollme {
+  to {
+    opacity: 0.6;
+  }
+}
+
+@-webkit-keyframes appear {
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 0.8;
+  }
+}
+
+@-webkit-keyframes inf_loop {
+  from {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes inf_loop {
+  from {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.page_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+}
+
+.page_header_logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.page_header_logo span {
+  color: #171717;
+  background: #fdf5dd;
+}
+
+.page_header_logo span::-moz-selection {
+  color: #fdf5dd;
+  background: #171717;
+}
+
+.page_header_logo span::selection {
+  color: #fdf5dd;
+  background: #171717;
+}
+
+.page_header_menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.page_header_menu span {
+  color: #fdf5dd;
+}
+/*# sourceMappingURL=global.css.map */

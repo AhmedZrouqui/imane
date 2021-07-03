@@ -1,0 +1,27 @@
+.page_header{
+    display: flex;
+    font-size: $dp*2;
+
+    &_logo{
+        flex: 1;
+        span{
+            color:$black;
+            background: $wheat;
+    
+            &::selection{
+                color:$wheat;
+                background: $black;
+            }
+        }
+    }
+
+    &_menu{
+        flex:1;
+        display: flex;
+        justify-content: flex-end;
+
+        span{
+            color:$wheat;
+        }
+    }
+}

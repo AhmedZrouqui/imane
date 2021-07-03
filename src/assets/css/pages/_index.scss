@@ -1,0 +1,158 @@
+.index_page {
+  width: 100vw;
+  height: 100vh;
+  background: $black;
+  position: relative;
+  overflow: hidden;
+
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    z-index: 3;
+    padding: $dp * 2;
+    position: relative;
+
+    h1 {
+      color: $wheat;
+      font-size: 3 * $fz;
+      font-weight: 400;
+      position: relative;
+      overflow: hidden;
+      padding-inline: $fz;
+      padding: $dp * 2;
+
+      margin-bottom: $dp * 4;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background: $black;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        animation: typing 4s 1s steps(54) forwards;
+      }
+
+      &::before {
+        content: "";
+        background: transparent;
+        top: 0;
+        bottom: 0;
+        left: 2px;
+        right: 0;
+        position: absolute;
+        border-left: 1px $wheat solid;
+        z-index: 5;
+        animation: bleak 4s 1s steps(54) forwards,
+          typing_effect 750ms ease-in-out infinite;
+      }
+    }
+
+    .to-my-website {
+      color: $wheat;
+      font-size: $fz * 2;
+      opacity: 0;
+      animation: appear 1s 5s ease-in-out forwards;
+    }
+
+    .scroll {
+      position: absolute;
+      bottom: 0;
+      color: $wheat;
+      opacity: 0;
+      left: 0;
+      transform: translateX(-50%);
+      text-decoration: underline;
+      transform: matrix3d(0, 0, 0);
+      animation: scrollme 2s ease infinite;
+    }
+  }
+
+  .index_social {
+    .social-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: $dp;
+      ul {
+        list-style: none;
+
+        li {
+          padding: $dp 0;
+
+          a {
+            font-size: $fz * 1.5;
+            padding: $dp 0;
+            color: $wheat;
+            opacity: 0.4;
+            transition: opacity 400ms ease;
+
+            &:hover {
+              opacity: 1;
+              transition: opacity 400ms ease;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .rotating-shape {
+    width: 40vw;
+    height: 40vw;
+    z-index: 2;
+    border: 4px $wheat solid;
+    background: transparent;
+    position: absolute;
+    opacity: 0.1;
+    transform: translate(-50%, -50%) !important;
+    left: 50%;
+    top: 50%;
+
+    animation: inf_loop 60s ease infinite;
+  }
+}
+
+@keyframes typing {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes bleak {
+  to {
+    left: calc(100% - 2px);
+  }
+}
+
+@keyframes typing_effect {
+  to {
+    border-left: none;
+  }
+}
+
+@keyframes scrollme {
+  to {
+    opacity: 0.6;
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes inf_loop {
+  from {
+    transform: rotate(1deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
