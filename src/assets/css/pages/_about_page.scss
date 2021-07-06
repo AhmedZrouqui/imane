@@ -1,0 +1,348 @@
+.about_page {
+  height: 100vh;
+  background: $black;
+  margin-top: ($dp * 2) 0;
+  padding: $dp * 5 0;
+
+  .container {
+    display: flex;
+    .infos {
+      .aboutme {
+        flex: 1;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+
+        width: max-content;
+        padding: $dp 0;
+        h1 {
+          font-size: $fz * 8;
+          color: transparent;
+          -webkit-text-stroke: 2px $wheat;
+        }
+      }
+
+      .about_title {
+        width: max-content;
+        flex: 1;
+        display: flex;
+        max-width: 87ch;
+        flex-direction: column;
+
+        .title {
+          font-size: $fz * 3.2;
+          font-weight: 600;
+          color: $wheat;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          padding: $dp 0;
+        }
+        .about_text {
+          font-size: $fz * 1.2;
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: $wheat;
+          opacity: 0.6;
+          line-height: 1.6;
+        }
+      }
+
+      .links {
+        padding: $dp * 6 0;
+
+        a {
+          padding: $dp $dp * 3;
+          display: inline;
+          border: 2px $wheat solid;
+          text-decoration: none;
+          color: $wheat;
+          position: relative;
+          transition: 0.8s all ease-out;
+
+          &::after,
+          &::before {
+            content: "";
+
+            position: absolute;
+            height: 2px;
+            width: 0;
+            background: $wheat;
+            transition: 0.8s all ease-out;
+          }
+
+          &::before {
+            top: 0;
+            right: 0;
+          }
+
+          &::after {
+            bottom: 0;
+            left: 0;
+          }
+
+          &:hover {
+            border-color: transparent;
+            &::after,
+            &::before {
+              width: 100%;
+              right: 0;
+              transition: 0.8s all ease-out;
+            }
+          }
+        }
+
+        .hire-me {
+          margin-right: $dp;
+        }
+      }
+    }
+
+    .image_container {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      max-height: 70vh;
+      z-index: 5;
+      .image {
+        max-height: 100%;
+        max-width: 100%;
+        filter: grayscale(0.8);
+      }
+    }
+  }
+}
+
+@include adapt-to(xxl) {
+  .about_page {
+    .container {
+      .infos {
+        .aboutme {
+          flex: 1;
+          z-index: 5;
+          display: flex;
+          align-items: center;
+
+          width: max-content;
+          padding: $dp 0;
+          h1 {
+            font-size: $fz * 8;
+            color: transparent;
+            -webkit-text-stroke: 2px $wheat;
+          }
+        }
+
+        .about_title {
+          width: max-content;
+          flex: 1;
+          display: flex;
+          max-width: 75ch;
+          flex-direction: column;
+
+          .title {
+            font-size: $fz * 4;
+            font-weight: 600;
+            color: $wheat;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: $dp 0;
+          }
+          .about_text {
+            font-size: $fz * 1.6;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: $wheat;
+            opacity: 0.6;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include adapt-to(xl) {
+  .about_page {
+    .container {
+      .infos {
+        .aboutme {
+          flex: 1;
+          z-index: 5;
+          display: flex;
+          align-items: center;
+
+          width: max-content;
+          padding: $dp 0;
+          h1 {
+            font-size: $fz * 8;
+            color: transparent;
+            -webkit-text-stroke: 2px $wheat;
+          }
+        }
+
+        .about_title {
+          width: max-content;
+          flex: 1;
+          display: flex;
+          max-width: 55ch;
+          flex-direction: column;
+
+          .title {
+            font-size: $fz * 4;
+            font-weight: 600;
+            color: $wheat;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: $dp 0;
+          }
+          .about_text {
+            font-size: $fz * 2;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: $wheat;
+            opacity: 0.6;
+            line-height: 1.6;
+          }
+        }
+      }
+
+      .image_container {
+        justify-content: center;
+        .image {
+          max-width: 90%;
+          max-height: 80%;
+        }
+      }
+    }
+  }
+}
+
+@include adapt-to(lg) {
+  .about_page {
+    height: 120vh;
+
+    .container {
+      flex-direction: column;
+      align-items: center;
+      .infos {
+        text-align: center;
+        .aboutme {
+          justify-content: center;
+          width: 100%;
+          h1 {
+            font-size: $fz * 8;
+            color: transparent;
+            -webkit-text-stroke: 2px $wheat;
+          }
+        }
+
+        .about_title {
+          width: max-content;
+          flex: 1;
+          display: flex;
+          max-width: 70ch;
+          flex-direction: column;
+
+          .title {
+            font-size: $fz * 5;
+            font-weight: 600;
+            color: $wheat;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: $dp 0;
+          }
+          .about_text {
+            font-size: $fz * 3;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: $wheat;
+            opacity: 0.6;
+            line-height: 1.6;
+          }
+        }
+
+        .links {
+          padding: $dp * 4 0;
+        }
+      }
+      .image_container {
+        justify-content: center;
+        .image {
+          max-height: 300px;
+          max-width: 300px;
+          border-radius: 50%;
+          filter: grayscale(0.8);
+        }
+      }
+    }
+  }
+}
+
+@include adapt-to(md) {
+  .about_page {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      .infos {
+        text-align: center;
+        .aboutme {
+          flex: 1;
+          z-index: 5;
+          display: flex;
+          justify-content: center;
+          width: max-content;
+          padding: $dp 0;
+          width: 100%;
+          h1 {
+            font-size: $fz * 6;
+            color: transparent;
+            -webkit-text-stroke: 2px $wheat;
+          }
+        }
+
+        .about_title {
+          width: max-content;
+          flex: 1;
+          display: flex;
+          font-size: 2.7 * $fz;
+          max-width: 50ch;
+          flex-direction: column;
+
+          .title {
+            font-size: $fz * 6;
+            font-weight: 600;
+            color: $wheat;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: $dp 0;
+          }
+          .about_text {
+            font-size: $fz * 2.6;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: $wheat;
+            opacity: 0.6;
+            line-height: 1.6;
+          }
+        }
+
+        .links {
+          padding: $dp * 4 0;
+          a {
+            padding: $dp $dp;
+          }
+        }
+      }
+      .image_container {
+        .image {
+          max-height: 220px;
+          max-width: 220px;
+        }
+      }
+    }
+  }
+}

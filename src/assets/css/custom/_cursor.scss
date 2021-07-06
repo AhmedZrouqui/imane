@@ -1,12 +1,15 @@
-.cursor{
-    z-index: 1000;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    border: 2px solid $wheat;
-    transform: matrix3d(0,0,0);
-    position: fixed;
-    background: $wheat;
-    pointer-events: none;
-    mix-blend-mode: difference;
+.cursor {
+  z-index: 1000;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  border: 2px solid $wheat;
+  transform: matrix3d(0, 0, 0);
+  position: fixed;
+  background: $wheat;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+.cursor-interract {
 }

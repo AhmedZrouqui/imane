@@ -5,7 +5,6 @@ import { useSpring, animated } from 'react-spring'
 function NavItem({ children, href, props }) {
 
     const { isOpen, setIsOpen } = props;
-
     return (
 
 

@@ -3,29 +3,27 @@
   height: 100vh;
   background: $black;
   position: relative;
-  overflow: hidden;
 
   .welcome {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 90vh;
     z-index: 3;
-    padding: $dp * 2;
     position: relative;
 
     h1 {
       color: $wheat;
-      font-size: 3 * $fz;
-      font-weight: 400;
+      font-size: 5 * $fz;
+      font-weight: 500;
       position: relative;
       overflow: hidden;
       padding-inline: $fz;
       padding: $dp * 2;
 
       margin-bottom: $dp * 4;
-
+      /*
       &::after {
         content: "";
         position: absolute;
@@ -35,7 +33,7 @@
         left: 0;
         right: 0;
 
-        animation: typing 4s 1s steps(54) forwards;
+        animation: typing 3s 1s steps(21) forwards;
       }
 
       &::before {
@@ -48,16 +46,30 @@
         position: absolute;
         border-left: 1px $wheat solid;
         z-index: 5;
-        animation: bleak 4s 1s steps(54) forwards,
+        animation: bleak 3s 1s steps(21) forwards,
           typing_effect 750ms ease-in-out infinite;
-      }
+      } */
     }
 
-    .to-my-website {
-      color: $wheat;
-      font-size: $fz * 2;
-      opacity: 0;
-      animation: appear 1s 5s ease-in-out forwards;
+    .paragraphs {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .location {
+        color: $wheat;
+        font-size: $fz * 3;
+        opacity: 1;
+        padding-bottom: $dp * 3;
+      }
+
+      .to-my-website {
+        color: $wheat;
+        font-size: $fz * 2;
+        font-weight: 400;
+        opacity: 1;
+      }
     }
 
     .scroll {
@@ -74,16 +86,17 @@
   }
 
   .index_social {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    transform: translateY(-50%);
     .social-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
       margin-left: $dp;
       ul {
         list-style: none;
 
         li {
-          padding: $dp 0;
+          padding: $dp * 2 0;
 
           a {
             font-size: $fz * 1.5;
@@ -105,7 +118,7 @@
   .rotating-shape {
     width: 40vw;
     height: 40vw;
-    z-index: 2;
+    z-index: 0;
     border: 4px $wheat solid;
     background: transparent;
     position: absolute;
@@ -114,7 +127,7 @@
     left: 50%;
     top: 50%;
 
-    animation: inf_loop 60s ease infinite;
+    animation: inf_loop infinite 60s linear;
   }
 }
 
@@ -142,17 +155,100 @@
   }
 }
 
-@keyframes appear {
-  to {
-    opacity: 0.8;
+@keyframes inf_loop {
+  0% {
+    transform: rotate(0deg) translate(0%, 50%);
+  }
+  30% {
+    transform: rotate(180deg) translate(-50%, -50%);
+  }
+
+  60% {
+    transform: rotate(240deg) translate(-100%, -100%);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(0%, 50%);
   }
 }
 
-@keyframes inf_loop {
-  from {
-    transform: rotate(1deg);
+@include adapt-to(sm) {
+  .index_page {
+    .welcome {
+      height: 70vh;
+      h1 {
+        font-size: $fz * 7;
+        padding: 0;
+      }
+      .paragraphs {
+        .location {
+          font-size: $fz * 4;
+        }
+
+        .to-my-website {
+          font-size: $fz * 3.2;
+          font-weight: 400;
+        }
+      }
+    }
+    .index_social {
+      top: 105%;
+      .social-nav {
+        ul {
+          li {
+            padding: $dp 0;
+            a {
+            }
+          }
+        }
+      }
+    }
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@include adapt-to(lg) {
+  .index_page {
+    height: 70vh;
+    .index_social {
+      height: max-content;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0) !important;
+      display: flex;
+      justify-content: center;
+      .social-nav {
+        ul {
+          display: flex;
+
+          li {
+            padding-inline: 1.6 * $dp;
+
+            &:first-child {
+              padding-left: 0;
+            }
+
+            a {
+              font-size: 5 * $fz;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include adapt-to(xl) {
+  .index_page {
+    .index_social {
+      .social-nav {
+        ul {
+          li {
+            a {
+              font-size: 5 * $fz;
+            }
+          }
+        }
+      }
+    }
   }
 }

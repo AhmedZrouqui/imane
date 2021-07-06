@@ -1,12 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+@import "./custom/text-stroke";
 
-$fira : "Fira Code", monospace;
+$fira: "Fira Code", monospace;
 
 $black: hsl(0, 0%, 9%);
 $wheat: hsl(44, 89%, 93%);
 
-
-
 /*spacing */
 $dp: 1rem;
-$fz: 1rem;
+$fz: 1vw;
+
+@mixin adapt-to($screen) {
+  @if $screen == "sm" {
+    @media screen and (max-width: 576px) {
+      @content;
+    }
+  } @else if $screen == "md" {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $screen == "lg" {
+    @media screen and (max-width: 992px) {
+      @content;
+    }
+  } @else if $screen == "xl" {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  } @else if $screen == "xxl" {
+    @media screen and (max-width: 1400px) {
+      @content;
+    }
+  }
+}

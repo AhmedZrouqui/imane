@@ -17,7 +17,7 @@ function Cursor() {
     }, [])
 
     return (
-        <div className="cursor" ref={cursorRef}>
+        <div className={`cursor`} ref={cursorRef}>
         </div>
     )
 }
