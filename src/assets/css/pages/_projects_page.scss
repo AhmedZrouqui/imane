@@ -1,5 +1,4 @@
 .projects_page {
-  height: calc(100vh + $fz * 8);
   .container {
     height: 100%;
     width: 100vw;
@@ -20,12 +19,17 @@
         display: flex;
         height: 100%;
         width: 100%;
-        .first {
-          flex: 2;
+        position: relative;
+        margin-bottom: 2 * $dp;
+
+        .project_item_item {
+          text-align: center;
+          flex: 1;
           display: flex;
           flex-direction: column;
           color: $wheat;
           width: 100%;
+          position: relative;
           h2 {
             text-transform: uppercase;
             font-size: $fz * 2;
@@ -38,36 +42,14 @@
             line-height: 42px;
           }
 
-          img {
-            flex: 3;
-            max-height: 100%;
-            max-width: 100%;
-          }
-        }
-        .second {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          color: wheat;
-          h4 {
-            flex: 1;
-            font-size: $fz * 1.2;
-            font-weight: 30;
-            text-transform: uppercase;
-            line-height: 42px;
-          }
-          & > div {
-            flex: 1;
+          div {
+            flex: 2;
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
+            align-items: center;
+            justify-content: center;
             img {
-              max-height: 51%;
+              max-height: 100%;
               max-width: 100%;
-              &:first-child {
-                margin-bottom: $fz;
-              }
             }
           }
         }

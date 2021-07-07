@@ -31,7 +31,7 @@ function About() {
     }) 
 
     return (
-        <section className="about_page">
+        <section className="about_page" id="about" data-scroll-section>
             <Container>
                 <div className="infos">
                     <div className="aboutme" ref={el => aboutmeRef = el}>

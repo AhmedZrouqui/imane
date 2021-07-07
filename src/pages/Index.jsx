@@ -62,7 +62,7 @@ function Index({props}) {
 
 
     return (
-        <section className="index_page" ref={el => indexRef = el}>
+        <section data-scroll-section className="index_page" ref={el => indexRef = el} id="index">
 
 
             <div className="rotating-shape"></div>

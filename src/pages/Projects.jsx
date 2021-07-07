@@ -11,17 +11,11 @@ function Projects() {
         return projects.map((item,index) => {
             return(
                 <ProjectItem>
-                    <div className="first">
-                            <h2>{item.title}</h2>
-                            <h4>{item.type}</h4>
-                        <img src={item._3d_img} alt={item.title} />
-                    </div>
-
-                    <div className="second">
-                        <h4>Sketches</h4>
+                    <div className="project_item_item">
+                        <h2>{item.id} - {item.title}</h2>
+                        <h4>{item.type}</h4>
                         <div>
-                        <img src={item._sketch1} alt={item.title} />
-                        <img src={item._sketch2} alt={item.title} />
+                            <img src={item._3d_img} alt={item.title} />
                         </div>
                     </div>
                 </ProjectItem>
@@ -30,7 +24,7 @@ function Projects() {
     }
 
     return (
-        <div className="projects_page">
+        <section className="projects_page" id="works" data-scroll-section>
             <Container>
                 <div className="title">
                     <h1>
@@ -41,7 +35,7 @@ function Projects() {
                     {displayProjects()}
                 </div>
             </Container>
-        </div>
+        </section>
     )
 }
 

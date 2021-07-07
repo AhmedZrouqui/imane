@@ -124,8 +124,48 @@ body {
   }
 }
 
+.footer {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  color: $wheat;
+  justify-content: center;
+  span {
+    font-size: $fz;
+    a {
+      color: $wheat;
+    }
+  }
+}
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: $black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $wheat;
+
+  h2 {
+    font-size: 4 * $fz;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-weight: 300;
+    font-size: 1.8 * $fz;
+    font-style: italic;
+  }
+  span {
+    font-style: italic;
+  }
+}
+
 @import "./custom/cursor";
 @import "./pages/index";
 @import "./pages/header";
 @import "./pages/about_page";
 @import "./pages/projects_page";
+@import "./pages/contact_page";

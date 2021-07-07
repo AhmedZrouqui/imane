@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useSpring, animated } from 'react-spring'
+import {Link} from 'react-scroll'
 
 function NavItem({ children, href, props }) {
 
@@ -9,9 +10,15 @@ function NavItem({ children, href, props }) {
 
 
         <li className={`${isOpen ? 'expand_link' : 'close-immediately'}`} >
-            <a href={href}>
+            <Link to={href} spy={true}
+                smooth={true}
+                offset={-70}
+                duration={800}
+                onClick={() => setIsOpen(!isOpen)}
+                >
                 {children}
-            </a>
+                
+            </Link>
         </li>
     )
 }

@@ -9,13 +9,13 @@ export const socialmedia = [
     id: "1",
     social: "facebook",
     icon: <IoLogoFacebook />,
-    link: "https://facebook.com",
+    link: "https://web.facebook.com/imane.sihi",
   },
   {
     id: "2",
     social: "instagram",
     icon: <IoLogoInstagram />,
-    link: "https://instagram.com",
+    link: "https://www.instagram.com/imane_sihi/",
   },
   {
     id: "3",
@@ -33,6 +33,6 @@ export const socialmedia = [
     id: "5",
     social: "behance",
     icon: <IoLogoBehance />,
-    link: "https://behance.com",
+    link: "https://www.behance.net/imane_sihi",
   },
 ];
