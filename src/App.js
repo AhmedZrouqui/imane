@@ -21,8 +21,6 @@ function App() {
   let appRef = useRef(null);
   let id = useRef(null);
 
-  useLocoScroll(!preloader);
-
   const clear = () => {
     window.clearInterval(id.current);
     setPreloader(false);
@@ -48,12 +46,7 @@ function App() {
           <span>loading...</span>
         </div>
       ) : (
-        <div
-          className="App"
-          id="main-container"
-          ref={(el) => (appRef = el)}
-          data-scroll-container
-        >
+        <div className="App" ref={(el) => (appRef = el)}>
           <Header props={header_props} />
           <Index props={header_props} />
           <About />

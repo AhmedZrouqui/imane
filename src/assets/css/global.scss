@@ -124,20 +124,6 @@ body {
   }
 }
 
-.footer {
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  color: $wheat;
-  justify-content: center;
-  span {
-    font-size: $fz;
-    a {
-      color: $wheat;
-    }
-  }
-}
-
 .preloader {
   position: fixed;
   inset: 0;
@@ -160,6 +146,20 @@ body {
   }
   span {
     font-style: italic;
+  }
+}
+
+.footer {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  color: $wheat;
+  justify-content: center;
+  span {
+    font-size: $fz;
+    a {
+      color: $wheat;
+    }
   }
 }
 

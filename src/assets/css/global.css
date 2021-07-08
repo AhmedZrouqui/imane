@@ -143,28 +143,6 @@ body::-webkit-scrollbar-thumb {
   color: #171717;
 }
 
-.footer {
-  height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fdf5dd;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.footer span {
-  font-size: 1vw;
-}
-
-.footer span a {
-  color: #fdf5dd;
-}
-
 .preloader {
   position: fixed;
   inset: 0;
@@ -198,6 +176,28 @@ body::-webkit-scrollbar-thumb {
 
 .preloader span {
   font-style: italic;
+}
+
+.footer {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fdf5dd;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer span {
+  font-size: 1vw;
+}
+
+.footer span a {
+  color: #fdf5dd;
 }
 
 .cursor {
@@ -1074,7 +1074,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .contact_page {
-  height: 90vh;
   width: 100%;
 }
 
