@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/imane/static/css/main.acfd5b85.chunk.css",
+    "main.js": "/imane/static/js/main.9b908faf.chunk.js",
+    "main.js.map": "/imane/static/js/main.9b908faf.chunk.js.map",
+    "runtime-main.js": "/imane/static/js/runtime-main.76cd06b3.js",
+    "runtime-main.js.map": "/imane/static/js/runtime-main.76cd06b3.js.map",
+    "static/js/2.e7c72221.chunk.js": "/imane/static/js/2.e7c72221.chunk.js",
+    "static/js/2.e7c72221.chunk.js.map": "/imane/static/js/2.e7c72221.chunk.js.map",
+    "static/js/3.d0edb837.chunk.js": "/imane/static/js/3.d0edb837.chunk.js",
+    "static/js/3.d0edb837.chunk.js.map": "/imane/static/js/3.d0edb837.chunk.js.map",
+    "index.html": "/imane/index.html",
+    "static/css/main.acfd5b85.chunk.css.map": "/imane/static/css/main.acfd5b85.chunk.css.map",
+    "static/js/2.e7c72221.chunk.js.LICENSE.txt": "/imane/static/js/2.e7c72221.chunk.js.LICENSE.txt",
+    "static/media/imaneImg.29f62f23.jpeg": "/imane/static/media/imaneImg.29f62f23.jpeg",
+    "static/media/project_3d.jpeg": "/imane/static/media/project_3d.af83b4c6.jpeg",
+    "static/media/project_sketch_1.jpeg": "/imane/static/media/project_sketch_1.ed787047.jpeg",
+    "static/media/project_sketch_2.jpeg": "/imane/static/media/project_sketch_2.813c5860.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.76cd06b3.js",
+    "static/js/2.e7c72221.chunk.js",
+    "static/css/main.acfd5b85.chunk.css",
+    "static/js/main.9b908faf.chunk.js"
+  ]
+}
