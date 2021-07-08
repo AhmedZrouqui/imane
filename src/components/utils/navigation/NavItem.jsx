@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { useSpring, animated } from 'react-spring'
 import {Link} from 'react-scroll'
 
 function NavItem({ children, href, props }) {

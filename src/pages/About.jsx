@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react'
 import Container from '../components/utils/Container'
 import imaneImg from '../assets/img/imaneImg.jpeg'
 
-import {TweenMax, TimelineLite, Power3} from 'gsap';
+import gsap,{TimelineLite, Power3} from 'gsap';
 
 function About() {
 
@@ -10,7 +10,6 @@ function About() {
     let aboutmeRef = useRef(null);
     let imgRef = useRef(null)
     let linksRef = useRef(null)
-
 
 
     let tl = new TimelineLite();
@@ -28,6 +27,8 @@ function About() {
             .from(title, 2, {y:300, opacity:0, ease:Power3.easeOut}, 1)
             .from(info, 2, {opacity:0, ease:Power3.easeOut}, 1.5)
             .from(linksRef, 2, {y:200, opacity:0, ease:Power3.easeOut}, 1)
+
+        
     }) 
 
     return (

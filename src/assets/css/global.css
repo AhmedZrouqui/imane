@@ -528,7 +528,7 @@ body::-webkit-scrollbar-thumb {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: calc(10vh - (2 * $dp));
+  height: calc(10vh - (2rem));
   font-size: 2rem;
   background: transparent;
   padding: 1rem;
